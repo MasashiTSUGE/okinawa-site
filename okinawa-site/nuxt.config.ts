@@ -17,5 +17,5 @@ export default defineNuxtConfig({
     modules: ["nuxt-icon"],
 });
 module.exports = {
-    css: ["assets/css/reset.css", "assets/css/common.css"],
+    css: ["assets/css/reset.css", "assets/css/common.scss"],
 };
