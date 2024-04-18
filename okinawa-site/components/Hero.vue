@@ -1,57 +1,67 @@
 <template>
     <section class="hero" @click="change">
         <div class="hero-slider">
-            <transition-group>
-                <div class="img-left">
+            <div class="img-left">
+                <transition>
                     <img
                         :src="`images/${image[0]}`"
                         alt=""
                         v-show="page == 0"
                         :key="`left${page}`"
                     />
+                </transition>
+                <transition>
                     <img
                         :src="`images/${image[1]}`"
                         alt=""
                         v-show="page == 1"
                         :key="`left${page}`"
                     />
+                </transition>
+                <transition>
                     <img
                         :src="`images/${image[2]}`"
                         alt=""
                         v-show="page == 2"
                         :key="`left${page}`"
                     />
-                    <p class="hero-sub" v-if="page == 0">{{ text[0] }}</p>
-                    <p class="hero-sub" v-if="page == 1">{{ text[1] }}</p>
-                    <p class="hero-sub" v-if="page == 2">{{ text[2] }}</p>
-                </div>
-                <div class="img-center">
-                    <h2 class="hero-title">
-                        <span class="first">五感で感じる</span
-                        ><span class="second">沖縄の味わい</span>
-                    </h2>
-                </div>
-                <div class="img-right">
+                </transition>
+                <p class="hero-sub" v-if="page == 0">{{ text[0] }}</p>
+                <p class="hero-sub" v-if="page == 1">{{ text[1] }}</p>
+                <p class="hero-sub" v-if="page == 2">{{ text[2] }}</p>
+            </div>
+            <div class="img-center">
+                <h2 class="hero-title">
+                    <span class="first">五感で感じる</span
+                    ><span class="second">沖縄の味わい</span>
+                </h2>
+            </div>
+            <div class="img-right">
+                <transition>
                     <img
                         :src="`images/${image[0]}`"
                         alt=""
                         v-show="page == 0"
                         :key="page"
                     />
+                </transition>
+                <transition>
                     <img
                         :src="`images/${image[1]}`"
                         alt=""
                         v-show="page == 1"
                         :key="page"
                     />
+                </transition>
+                <transition>
                     <img
                         :src="`images/${image[2]}`"
                         alt=""
                         v-show="page == 2"
                         :key="page"
                     />
-                </div>
-            </transition-group>
+                </transition>
+            </div>
         </div>
     </section>
 </template>
@@ -66,7 +76,7 @@ export default {
         };
     },
     mounted() {
-        setInterval(this.change, 5000);
+        setInterval(this.change, 7500);
     },
     methods: {
         change() {
@@ -82,7 +92,7 @@ export default {
 <style lang="scss" scoped>
 .v-enter-active,
 .v-leave-active {
-    transition: all 0.7s ease;
+    transition: all 1s ease;
 }
 
 .v-enter-from {
@@ -101,9 +111,8 @@ img {
     height: 380px;
     width: 100%;
     position: relative;
-    background-color: var(--form-red);
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
     .hero-slider {
         display: flex;
         height: 100%;
@@ -114,9 +123,11 @@ img {
             height: 100%;
             width: 61%;
             position: relative;
+            flex-shrink: 0;
             img {
                 width: 100%;
                 height: 100%;
+                position: absolute;
             }
             .hero-sub {
                 position: absolute;
@@ -132,6 +143,7 @@ img {
             height: 100%;
             background-color: #fff;
             position: relative;
+            flex-shrink: 0;
             .hero-title {
                 position: absolute;
                 z-index: 100;
@@ -145,8 +157,9 @@ img {
                 span {
                     display: block;
                     background-color: #fff;
-                    padding: 10px 13px;
+                    padding: 10px 5px;
                     height: fit-content;
+                    width: fit-content;
                 }
                 .second {
                     margin-top: 36px;
@@ -156,7 +169,47 @@ img {
         .img-right {
             background-color: #fff;
             height: 100%;
-            width: 27%;
+            width: 61%;
+            flex-shrink: 0;
+            img {
+                position: absolute;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: 100%;
+        height: 47vw;
+        .hero-slider {
+            .img-left {
+                width: 66%;
+                .hero-sub {
+                    font-size: 36px;
+                    left: 40px;
+                    bottom: 50px;
+                }
+            }
+            .img-center {
+                width: 8.4%;
+                .hero-title {
+                    font-size: 60px;
+                    font-weight: 400;
+                    top: auto;
+                    bottom: -10px;
+                    left: -64px;
+                    height: fit-content;
+                    span {
+                        padding: 30px 10px;
+                    }
+                    .second {
+                        margin-top: 67px;
+                    }
+                }
+            }
+            .img-right {
+                img {
+                    object-position: right 200px top 50%;
+                }
+            }
         }
     }
 }

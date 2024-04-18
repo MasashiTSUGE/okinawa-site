@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div class="nav-btn" @click="clickMenu">btn</div>
+        <div class="nav-btn" @click="clickMenu">
+            <Icon name="iconamoon:apps-fill" />
+        </div>
         <transition>
             <div class="nav-menu" v-show="activeMenu">
                 <ul>

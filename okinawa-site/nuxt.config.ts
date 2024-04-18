@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
     app: {
         head: {
+            title: "okinawa-site",
             link: [
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
                 {
@@ -14,8 +14,6 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: true },
+    css: ["~/assets/css/reset.css", "~/assets/css/common.scss"],
     modules: ["nuxt-icon"],
 });
-module.exports = {
-    css: ["assets/css/reset.css", "assets/css/common.scss"],
-};

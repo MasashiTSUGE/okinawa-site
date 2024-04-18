@@ -1,0 +1,240 @@
+<template>
+    <div>
+        <section class="overview">
+            <div class="overview-image"></div>
+            <div class="overview-textbox textbox">
+                <h3 class="uppercase main-font-en">
+                    <span>01</span>{{ textbox[0].section }}
+                </h3>
+                <div class="border-topbottom">
+                    <h4 class="section-title">{{ textbox[0].title }}</h4>
+                    <p>{{ textbox[0].text }}</p>
+                </div>
+                <a v-if="textbox[0].link">詳しく見る</a>
+            </div>
+        </section>
+        <section class="activities">
+            <p class="index-vertical vertical">遊ぶ</p>
+            <div class="activities-hanabi"></div>
+            <div class="activities-image-1"></div>
+            <div class="activities-image-2"></div>
+            <div class="activities-image-3"></div>
+            <div class="activities-textbox textbox">
+                <h3 class="uppercase main-font-en">
+                    <span>02</span>{{ textbox[1].section }}
+                </h3>
+                <div class="border-topbottom">
+                    <h4 class="section-title">{{ textbox[1].title }}</h4>
+                    <p>{{ textbox[1].text }}</p>
+                    <a v-if="textbox[1].link" href="/activities"
+                        ><p>詳しく見る</p>
+                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                    /></a>
+                </div>
+            </div>
+        </section>
+        <section class="foods">
+            <p class="index-vertical vertical">食べる</p>
+            <div class="food-hibiscus"></div>
+            <FoodSlide />
+            <div class="foods-textbox textbox">
+                <h3 class="uppercase main-font-en">
+                    <span>03</span>{{ textbox[2].section }}
+                </h3>
+                <div class="border-topbottom">
+                    <h4 class="section-title">{{ textbox[2].title }}</h4>
+                    <p>{{ textbox[2].text }}</p>
+                    <a v-if="textbox[2].link" href="/foods"
+                        ><p>詳しく見る</p>
+                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                    /></a>
+                </div>
+            </div>
+        </section>
+        <section class="hotels">
+            <div class="hotel-image"></div>
+            <div class="hotel-textbox textbox">
+                <h3 class="uppercase main-font-en">
+                    <span>04</span>{{ textbox[3].section }}
+                </h3>
+                <div class="border-topbottom">
+                    <h4 class="section-title">{{ textbox[3].title }}</h4>
+                    <p>{{ textbox[3].text }}</p>
+                    <a v-if="textbox[3].link" href="hotels"
+                        ><p>詳しく見る</p>
+                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                    /></a>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>
+<script>
+export default {
+    data() {
+        return {
+            textbox: [
+                {
+                    section: "overview",
+                    title: "きっと見つかる、わたしの居場所",
+                    text: "ゆったりとした自然が広がる場所、沖縄。海をはじめとする景色やアクティビティ、ユニークな食べ物、そして穏やかな人々が非日常を演出します。沖縄だからこそ味わえる、記憶に残るリゾート気分を満喫できます。",
+                    link: false,
+                },
+                {
+                    section: "activities",
+                    title: "幻想的な空と海の青き世界",
+                    text: "ダイビング、シュノーケリング、バナナボートをはじめとするマリンアクティビティや、パラセーリングで空中散歩など、青の世界に包まれながら日常では味わえない遊びが堪能できます。",
+                    link: true,
+                },
+                {
+                    section: "foods",
+                    title: "ユニークな絶品料理に舌鼓",
+                    text: "ソーキそば、アグー豚、泡盛など、沖縄にはユニークでおいしい郷土料理がたくさんあります。昼はおしゃれなカフェでランチ、夜はお酒を飲みながら郷土料理ディナー。目から舌から美味しい時間を堪能できます。",
+                    link: true,
+                },
+                {
+                    section: "hotels",
+                    title: "ゆったりとくつろげる厳選の宿",
+                    text: "沖縄には異国のようなリゾートホテルが豊富にご用意されています。その非日常的な空間は、楽しい観光やアクティビティの疲れを癒してくれます。ホテルでゆっくりリゾート気分を味わうのもおすすめです。",
+                    link: true,
+                },
+            ],
+        };
+    },
+};
+</script>
+<style lang="scss" scoped>
+section {
+    position: relative;
+}
+.index-vertical {
+    font-family: var(--ShipporiMincho);
+    font-size: 10.6vw;
+    color: var(--text-lightgray);
+    letter-spacing: 0.5em;
+}
+.overview {
+    padding-top: 70px;
+    width: 100%;
+    height: 210vw;
+    .overview-image {
+        position: absolute;
+        width: 91%;
+        top: 70px;
+        aspect-ratio: 342/400;
+        height: auto;
+        background: url(images/index-overview.png) center/cover;
+        z-index: 5;
+    }
+    .overview-textbox {
+        position: absolute;
+        top: 117vw;
+        left: 3.4%;
+        z-index: 10;
+    }
+}
+.activities {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: 13vw;
+    margin-bottom: 30vw;
+    height: 151vw;
+    .activities-textbox {
+        position: absolute;
+        bottom: -30vw;
+    }
+    .activities-hanabi {
+        background: url(images/index-activities-hanabi.svg);
+        width: 29.8vw;
+        aspect-ratio: 112/80;
+        position: absolute;
+        top: -13vw;
+        left: 3.4vw;
+    }
+    .index-vertical {
+        position: absolute;
+        top: 42vw;
+        left: 13vw;
+        z-index: 7;
+    }
+    .activities-image-1 {
+        background: url(images/index-activities-1.png) center/cover no-repeat;
+        position: absolute;
+        width: 43.7vw;
+        aspect-ratio: 1/1;
+        left: 21vw;
+        top: 28.2vw;
+        z-index: 6;
+    }
+    .activities-image-2 {
+        position: absolute;
+        background: url(images/index-activities-2.png) center/cover;
+        width: 12.3vw;
+        aspect-ratio: 46/103;
+        top: 8.8vw;
+        right: 17.6vw;
+    }
+    .activities-image-3 {
+        position: absolute;
+        background: url(images/index-activities-3.png) 65% 50% / cover;
+        width: 12.3vw;
+        aspect-ratio: 46/103;
+        top: -13vw;
+        right: 0;
+    }
+}
+.foods {
+    margin-top: 48.2vw;
+    background-color: #f2f2f2;
+    margin-right: auto;
+    margin-bottom: 25.2vw;
+    width: 91.2vw;
+    height: 133vw;
+    .foods-textbox {
+        position: absolute;
+        bottom: -25.2vw;
+        left: 12vw;
+    }
+}
+.textbox {
+    background-color: #fff;
+    padding: 20px;
+    width: 87vw;
+}
+.overview {
+    .textbox {
+        width: calc(87% + 20px);
+    }
+}
+h3 {
+    margin-bottom: 20px;
+    span {
+        margin-right: 1em;
+    }
+}
+.border-topbottom {
+    padding: 20px 0;
+    border-top: 1px solid var(--text-main);
+    border-bottom: 1px solid var(--text-main);
+    h4 {
+        margin-bottom: 20px;
+    }
+    p {
+        padding-bottom: 1em;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        text-decoration: none;
+        p {
+            padding: 0;
+            margin-right: 1em;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+</style>
