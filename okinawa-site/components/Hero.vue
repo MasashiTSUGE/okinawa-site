@@ -76,7 +76,7 @@ export default {
         };
     },
     mounted() {
-        setInterval(this.change, 7500);
+        // setInterval(this.change, 7500);
     },
     methods: {
         change() {
@@ -109,11 +109,13 @@ img {
 }
 .hero {
     height: 380px;
-    width: 100%;
+    width: 100vw;
     position: relative;
     display: flex;
     overflow-x: hidden;
     .hero-slider {
+        position: relative;
+        overflow: hidden;
         display: flex;
         height: 100%;
         width: 100%;
@@ -169,9 +171,12 @@ img {
         .img-right {
             background-color: #fff;
             height: 100%;
-            width: 61%;
+            width: 100%;
             flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
             img {
+                width: 100%;
                 position: absolute;
             }
         }

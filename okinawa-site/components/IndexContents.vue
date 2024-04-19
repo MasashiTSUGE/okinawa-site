@@ -36,7 +36,7 @@
         <section class="foods">
             <p class="index-vertical vertical">食べる</p>
             <div class="food-hibiscus"></div>
-            <FoodSlide />
+            <FoodsSlide />
             <div class="foods-textbox textbox">
                 <h3 class="uppercase main-font-en">
                     <span>03</span>{{ textbox[2].section }}
@@ -53,7 +53,9 @@
         </section>
         <section class="hotels">
             <div class="hotel-image"></div>
-            <div class="hotel-textbox textbox">
+            <p class="index-vertical vertical">泊まる</p>
+            <HotelSlide />
+            <div class="hotels-textbox textbox">
                 <h3 class="uppercase main-font-en">
                     <span>04</span>{{ textbox[3].section }}
                 </h3>
@@ -194,6 +196,39 @@ section {
         position: absolute;
         bottom: -25.2vw;
         left: 12vw;
+    }
+    .index-vertical {
+        position: absolute;
+        top: -8vw;
+        right: -8vw;
+    }
+    .food-hibiscus {
+        width: 26.6vw;
+        height: 26.6vw;
+        background: url("images/index-food-hibiscus.svg") center/contain
+            no-repeat;
+        position: absolute;
+        right: -8.8vw;
+        top: 40vw;
+    }
+}
+.hotels {
+    margin-top: 54.9vw;
+    margin-bottom: 26.9vw;
+    width: 91.2vw;
+    height: 128.5vw;
+    background-color: #f2f2f2;
+    .index-vertical {
+        position: absolute;
+        top: -8vw;
+        right: -8vw;
+        z-index: 10;
+    }
+    .hotels-textbox {
+        position: absolute;
+        bottom: -26.9vw;
+        left: 0;
+        z-index: 10;
     }
 }
 .textbox {
