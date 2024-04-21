@@ -196,7 +196,7 @@ img {
             .img-center {
                 width: 8.4%;
                 .hero-title {
-                    font-size: 60px;
+                    font-size: 4.3vw;
                     font-weight: 400;
                     top: auto;
                     bottom: -10px;

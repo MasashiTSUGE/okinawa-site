@@ -205,10 +205,10 @@ section {
     .food-hibiscus {
         width: 26.6vw;
         height: 26.6vw;
-        background: url("images/index-food-hibiscus.svg") center/contain
+        background: url("images/index-food-hibiscus.svg") right/contain
             no-repeat;
         position: absolute;
-        right: -8.8vw;
+        right: -7.2vw;
         top: 40vw;
     }
 }
