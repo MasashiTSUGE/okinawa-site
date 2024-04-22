@@ -1,10 +1,23 @@
 <template>
     <div class="slider">
         <div class="overflow-wrap">
-            <div class="hotel-slide-wrap">
-                <img :src="img[0]" @click="change" />
-                <img :src="img[1]" @click="change" />
-                <img :src="img[2]" @click="change" />
+            <div class="hotel-slide-wrap" :class="{ moveleft: ismove }">
+                <img
+                    :src="img[display[0]]"
+                    :alt="alt[display[0]]"
+                    @click="change"
+                />
+                <img
+                    :src="img[display[1]]"
+                    :alt="alt[display[1]]"
+                    @click="change"
+                />
+                <img
+                    :src="img[display[2]]"
+                    :alt="alt[display[2]]"
+                    @click="change"
+                />
+                <img :src="img[display[0]]" :alt="alt[display[0]]" />
             </div>
         </div>
     </div>
@@ -18,26 +31,40 @@ export default {
                 "images/index-hotel-2.png",
                 "images/index-hotel-3.png",
             ],
+            alt: ["hotel1", "hotel2", "hotel3"],
             position: 0,
+            ismove: false,
         };
     },
-
+    mounted() {
+        setInterval(() => {
+            this.change();
+        }, 5000);
+    },
     methods: {
-        change: function () {
+        change() {
             if (this.position < 2) {
-                this.position++;
-                console.log(this.position);
+                this.ismove = true;
+                setTimeout(() => {
+                    this.position++;
+                    this.ismove = false;
+                }, 1000);
             } else {
-                this.position = 0;
-                console.log(this.position);
+                this.ismove = true;
+                setTimeout(() => {
+                    this.position = 0;
+                    this.ismove = false;
+                }, 1000);
             }
         },
+    },
+    computed: {
         display() {
-            if ((this.position = 0)) {
+            if (this.position == 0) {
                 return [2, 0, 1];
-            } else if ((this.position = 1)) {
+            } else if (this.position == 1) {
                 return [0, 1, 2];
-            } else if ((this.position = 2)) {
+            } else if (this.position == 2) {
                 return [1, 2, 0];
             } else {
                 return [2, 0, 1];
@@ -49,7 +76,6 @@ export default {
 <style lang="scss" scoped>
 .slider {
     position: absolute;
-    background-color: greenyellow;
     z-index: 5;
     width: 100vw;
     height: 59.4vw;
@@ -69,6 +95,8 @@ export default {
     position: absolute;
     display: flex;
     left: -45vw;
+    top: 0;
+    transition: transform 1s;
     img {
         height: 100%;
         aspect-ratio: 1/1;
@@ -76,6 +104,18 @@ export default {
         display: block;
         margin-left: 1.7vw;
         margin-right: 1.7vw;
+    }
+}
+.moveleft {
+    animation-name: moveslide;
+    animation-duration: 1s;
+}
+@keyframes moveslide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-63vw);
     }
 }
 </style>

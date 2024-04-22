@@ -11,6 +11,11 @@ html {
     background-repeat: no-repeat;
     box-sizing: inherit;
 }
+h1,
+h2,
+h3 {
+    font-size: inherit;
+}
 :after,
 :before {
     text-decoration: inherit;

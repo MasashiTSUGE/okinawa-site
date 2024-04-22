@@ -69,6 +69,7 @@
                 </div>
             </div>
         </section>
+        <CommonSlide />
     </div>
 </template>
 <script>

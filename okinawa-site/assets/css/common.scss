@@ -55,6 +55,12 @@ ul {
 .text-lightgray {
     color: var(--text-lightgray);
 }
+.sub-copy {
+    font-family: var(--ShipporiMincho);
+    font-size: 5.3vw;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
 /* header */
 .header {
     padding: 13px 20px 30px;
