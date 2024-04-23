@@ -13,6 +13,9 @@
         max-width: 1366px;
         margin-left: auto;
         margin-right: auto;
+        .header-title {
+            font-size: 32px;
+        }
     }
 }
 </style>

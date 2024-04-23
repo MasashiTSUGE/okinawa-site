@@ -63,7 +63,7 @@ ul {
 }
 /* header */
 .header {
-    padding: 13px 20px 30px;
+    padding: 20px 13px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,6 +72,7 @@ ul {
     font-size: 20px;
     line-height: 1.5;
     font-weight: 600;
+    letter-spacing: 0;
 }
 @media screen and (min-width: 768px) {
     .section-title {
@@ -80,6 +81,7 @@ ul {
         font-weight: 400;
     }
     .main-font,
+    .main-font-en,
     * p {
         font-family: "Oswald", "Noto Sans JP", sans-serif;
         font-size: 14px;

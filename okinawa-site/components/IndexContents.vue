@@ -28,7 +28,7 @@
                     <p>{{ textbox[1].text }}</p>
                     <a v-if="textbox[1].link" href="/activities"
                         ><p>詳しく見る</p>
-                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                        <Icon name="material-symbols-light:play-circle-outline"
                     /></a>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <p>{{ textbox[2].text }}</p>
                     <a v-if="textbox[2].link" href="/foods"
                         ><p>詳しく見る</p>
-                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                        <Icon name="material-symbols-light:play-circle-outline"
                     /></a>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <p>{{ textbox[3].text }}</p>
                     <a v-if="textbox[3].link" href="hotels"
                         ><p>詳しく見る</p>
-                        <Icon name="mdi:arrow-right-drop-circle-outline"
+                        <Icon name="material-symbols-light:play-circle-outline"
                     /></a>
                 </div>
             </div>
@@ -135,6 +135,19 @@ section {
         left: 3.4%;
         z-index: 10;
     }
+    @media screen and (min-width: 768px) {
+        padding-top: 12.4vw;
+        height: 80vw;
+        .overview-image {
+            top: 12.4vw;
+            width: 70.5vw;
+            aspect-ratio: 963/700;
+        }
+        .overview-textbox {
+            top: 41.7vw;
+            left: 30.7vw;
+        }
+    }
 }
 .activities {
     background-color: #f2f2f2;
@@ -184,6 +197,9 @@ section {
         aspect-ratio: 46/103;
         top: -13vw;
         right: 0;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 21.3vw;
     }
 }
 .foods {
@@ -236,10 +252,19 @@ section {
     background-color: #fff;
     padding: 20px;
     width: 87vw;
+    @media screen and (min-width: 768px) {
+        width: 69.2vw;
+        aspect-ratio: 946/524;
+        padding: 7.3vw 3.6vw;
+    }
 }
 .overview {
     .textbox {
         width: calc(87% + 20px);
+        @media screen and (min-width: 768px) {
+            width: 69.2vw;
+            aspect-ratio: 946/524;
+        }
     }
 }
 h3 {
@@ -271,6 +296,9 @@ h3 {
             width: 24px;
             height: 24px;
         }
+    }
+    @media screen and (min-width: 768px) {
+        padding: 5.8vw 0;
     }
 }
 </style>
