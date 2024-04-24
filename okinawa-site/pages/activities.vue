@@ -1,7 +1,11 @@
 <template>
     <div class="contents-wrap">
         <Header />
-        <SubHero bgUrl="bgUrl" />
+        <SubHero
+            bgUrl="images/activities-hero-bg.png"
+            title="activities"
+            subtitle="アクティビティ"
+        />
         <CommonSlide />
         <GetInTouch />
         <Footer />

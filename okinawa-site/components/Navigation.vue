@@ -91,6 +91,7 @@ export default {
     methods: {
         clickMenu() {
             this.activeMenu = !this.activeMenu;
+            this.$emit("childe-data", this.activeMenu);
             if (this.activeMenu === true) {
                 document.addEventListener("mousewheel", scroll_control, {
                     passive: false,

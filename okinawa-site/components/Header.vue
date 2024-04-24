@@ -1,11 +1,29 @@
 <template>
-    <header class="header">
+    <header class="header" :class="{ open: activeMenu }">
         <h1 class="main-font uppercase header-title text-lightgray">
             trip japan
         </h1>
-        <Navigtion />
+        <Navigation @childe-data="childeData" />
     </header>
 </template>
+<script>
+import Navigation from "~/components/Navigation.vue";
+export default {
+    components: {
+        Navigation: Navigation,
+    },
+    data() {
+        return {
+            activeMenu: false,
+        };
+    },
+    methods: {
+        childeData(childeMenu) {
+            this.activeMenu = childeMenu;
+        },
+    },
+};
+</script>
 <style lang="scss" scoped>
 .header {
     background-color: transparent;
@@ -18,5 +36,8 @@
             font-size: 32px;
         }
     }
+}
+.open {
+    background-color: #fff;
 }
 </style>
