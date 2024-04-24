@@ -80,13 +80,11 @@ export default {
     width: 100vw;
     height: 59.4vw;
     top: 18.4vw;
-    overflow: hidden;
 }
 .overflow-wrap {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
 }
 .hotel-slide-wrap {
     display: block;
@@ -104,6 +102,19 @@ export default {
         display: block;
         margin-left: 1.7vw;
         margin-right: 1.7vw;
+    }
+}
+@media screen and (min-width: 768px) {
+    .slider {
+        top: 10.9vw;
+        height: 41.3vw;
+    }
+    .hotel-slide-wrap {
+        left: -53.7vw;
+        img {
+            aspect-ratio: 788/565;
+            margin: 0 2.9vw;
+        }
     }
 }
 .moveleft {

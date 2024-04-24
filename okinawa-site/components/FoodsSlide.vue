@@ -67,5 +67,23 @@ export default {
             object-fit: cover;
         }
     }
+    @media screen and (min-width: 768px) {
+        width: 63.3vw;
+        height: 55vw;
+        top: -5.8vw;
+        left: 4.2vw;
+        .slide-image {
+            width: 100%;
+            height: 39.4vw;
+            aspect-ratio: 865/539;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .thumb-wrap {
+            height: 23%;
+        }
+    }
 }
 </style>

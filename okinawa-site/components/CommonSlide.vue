@@ -68,6 +68,16 @@ export default {
     .sub-copy {
         margin-left: 3.4vw;
         margin-bottom: 13.3vw;
+        font-weight: normal;
+        line-height: 1.75;
+    }
+    @media screen and (min-width: 768px) {
+        padding-top: 0;
+        .sub-copy {
+            margin-left: 4.2vw;
+            font-size: 2.6vw;
+            margin-bottom: 7.3vw;
+        }
     }
 }
 .common-slide-wrap {
@@ -76,6 +86,9 @@ export default {
     width: 100%;
     height: 92.5vw;
     display: flex;
+    @media screen and (min-width: 768px) {
+        height: 28.7vw;
+    }
 }
 .common-slide-wrap::after {
     content: "";
@@ -85,20 +98,25 @@ export default {
     top: 0;
     left: 3.75vw;
     border: 1px solid var(--text-main);
+    @media screen and (min-width: 768px) {
+        height: 28.7vw;
+        width: 66vw;
+        left: 16.5vw;
+    }
 }
 .slideshow {
     width: 100%;
     overflow: hidden;
-    position: relative; /* 追加 */
+    position: relative;
 }
 
 .slide {
     top: 10.6vw;
     left: -61vw;
     position: absolute;
-    display: flex; /* 追加 */
-    transition: transform 0.5s ease; /* 追加 */
-    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content;
     height: 71.2vw;
     img {
         display: block;
@@ -108,10 +126,24 @@ export default {
         object-fit: cover;
         object-position: center;
     }
+    @media screen and (min-width: 768px) {
+        top: 3.6vw;
+        height: 21.4vw;
+        left: -12.6vw;
+        img {
+            width: 36.6vw;
+            margin: 0 2.8vw;
+            height: 21.4vw;
+        }
+    }
 }
+
 .moveleft {
     animation-name: moveslide;
     animation-duration: 1s;
+    @media screen and (min-width: 768px) {
+        animation-name: moveslide-pc;
+    }
 }
 @keyframes moveslide {
     0% {
@@ -119,6 +151,14 @@ export default {
     }
     100% {
         transform: translateX(-72vw);
+    }
+}
+@keyframes moveslide-pc {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-41.8vw);
     }
 }
 </style>

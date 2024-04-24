@@ -70,6 +70,8 @@
             </div>
         </section>
         <CommonSlide />
+        <GetInTouch />
+        <Footer />
     </div>
 </template>
 <script>
@@ -160,7 +162,8 @@ section {
         bottom: -30vw;
     }
     .activities-hanabi {
-        background: url(images/index-activities-hanabi.svg);
+        background: url(images/index-activities-hanabi.svg) center/contain
+            no-repeat;
         width: 29.8vw;
         aspect-ratio: 112/80;
         position: absolute;
@@ -200,6 +203,40 @@ section {
     }
     @media screen and (min-width: 768px) {
         margin-top: 21.3vw;
+        width: 91.5vw;
+        height: 106vw;
+        margin-left: 8.5vw;
+        margin-bottom: 33vw;
+        .activities-textbox {
+            top: 81.4vw;
+            left: -4.2vw;
+        }
+        .activities-hanabi {
+            top: -7.9vw;
+            left: -4.2vw;
+            width: 28.1vw;
+            aspect-ratio: 385/425;
+        }
+        .index-vertical {
+            top: 34.8vw;
+            left: -1vw;
+        }
+        .activities-image-1 {
+            width: 46.5vw;
+            top: 27.5vw;
+            left: 11.1vw;
+        }
+        .activities-image-2 {
+            width: 11vw;
+            aspect-ratio: 151/338;
+            top: 10.1vw;
+            left: 63.4vw;
+        }
+        .activities-image-3 {
+            width: 11vw;
+            aspect-ratio: 151/338;
+            top: -7.3vw;
+        }
     }
 }
 .foods {
@@ -218,15 +255,35 @@ section {
         position: absolute;
         top: -8vw;
         right: -8vw;
+        letter-spacing: 0.14em;
     }
     .food-hibiscus {
         width: 26.6vw;
         height: 26.6vw;
-        background: url("images/index-food-hibiscus.svg") right/contain
+        background: url("images/index-food-hibiscus.svg") center/contain
             no-repeat;
         position: absolute;
-        right: -7.2vw;
+        right: -17.6vw;
         top: 40vw;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 38.8vw;
+        width: 91.5vw;
+        height: 88.1vw;
+        .index-vertical {
+            top: -5.8vw;
+            right: -10.2vw;
+        }
+        .food-hibiscus {
+            width: 24.9vw;
+            aspect-ratio: 341/334;
+            top: 29.2vw;
+            right: -11.4vw;
+        }
+        .foods-textbox {
+            left: 30.7vw;
+            bottom: -16.1vw;
+        }
     }
 }
 .hotels {
@@ -240,12 +297,28 @@ section {
         top: -8vw;
         right: -8vw;
         z-index: 10;
+        letter-spacing: 0.14em;
     }
     .hotels-textbox {
         position: absolute;
         bottom: -26.9vw;
         left: 0;
         z-index: 10;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 31.1vw;
+        width: 88.8vw;
+        height: 79.4vw;
+        margin-left: 11.2vw;
+        .hotels-textbox {
+            left: -6.9vw;
+            top: 48.6vw;
+            bottom: auto;
+        }
+        .index-vertical {
+            top: -7.3vw;
+            right: 2.8vw;
+        }
     }
 }
 .textbox {
@@ -299,6 +372,12 @@ h3 {
     }
     @media screen and (min-width: 768px) {
         padding: 5.8vw 0;
+        a {
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
 }
 </style>

@@ -57,8 +57,14 @@
                         ></router-link>
                     </li>
                     <li class="nav-footer">
-                        <div><Icon name="mage:instagram-circle" /></div>
-                        <div><Icon name="formkit:twitter" /></div>
+                        <div>
+                            <a href="#"
+                                ><Icon name="mage:instagram-circle"
+                            /></a>
+                        </div>
+                        <div>
+                            <a href="#"><Icon name="formkit:twitter" /></a>
+                        </div>
                     </li>
                 </ul>
             </div>
