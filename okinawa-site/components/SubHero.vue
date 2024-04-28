@@ -55,6 +55,7 @@ export default {
         height: 20.5vw;
         background: center/100%;
         margin-top: -149px;
+        margin-bottom: 13.2vw;
         .breadcrumb {
             left: 2.7vw;
             bottom: -2vw;

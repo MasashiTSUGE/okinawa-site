@@ -6,6 +6,8 @@
             title="activities"
             subtitle="アクティビティ"
         />
+        <ActivitiesIntro />
+        <ActivitiesContents />
         <CommonSlide />
         <GetInTouch />
         <Footer />
