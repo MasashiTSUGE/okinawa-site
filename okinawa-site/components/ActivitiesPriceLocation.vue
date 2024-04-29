@@ -178,7 +178,7 @@ export default {
         .price,
         .location {
             width: 49vw;
-            height: 39.5vw;
+            height: fit-content;
             margin-left: -2.8vw;
             margin-top: 5.5vw;
             margin-bottom: 14.4vw;
@@ -200,7 +200,7 @@ export default {
         }
         .location {
             margin-top: 18.9vw;
-            height: 29.7vw;
+            height: fit-content;
             margin-bottom: 3.6vw;
             h3 {
                 top: -5vw;

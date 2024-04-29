@@ -106,7 +106,7 @@ export default {};
         }
         .border-left {
             width: 31.9vw;
-            height: 16vw;
+            height: fit-content;
             margin: 0;
             padding-left: 1.4vw;
             align-self: flex-end;
@@ -118,6 +118,7 @@ export default {};
             }
             p {
                 width: 30.5vw;
+                margin-bottom: 1.5em;
             }
         }
     }

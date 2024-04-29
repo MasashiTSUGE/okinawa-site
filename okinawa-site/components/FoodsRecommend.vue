@@ -5,7 +5,16 @@
                 <h2 class="sub-copy">沖縄のおすすめ料理</h2>
                 <h3 class="text-center main-font-en uppercase">pick up</h3>
             </div>
-            <ul></ul>
+            <ul>
+                <li v-for="(list, index) in lists" :key="index">
+                    <p class="list-label"><img :src="list.title.src" /></p>
+                    <div class="list-image">
+                        <img :src="list.src" />
+                    </div>
+                    <h4 class="main-font">{{ list.title.name }}</h4>
+                    <p class="main-font">{{ list.text }}</p>
+                </li>
+            </ul>
         </div>
     </section>
 </template>
@@ -80,6 +89,87 @@ export default {
     .frame {
         border: 1px solid var(--text-main);
         margin-top: 4vw;
+    }
+    li {
+        width: 82.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 13.3vw;
+        padding-left: 4.8vw;
+        position: relative;
+        .list-label {
+            position: absolute;
+            text-align: center;
+            width: 38.1vw;
+            height: 11.4vw;
+            left: 0;
+            top: 5vw;
+            background-color: #fff8de;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                display: block;
+                max-width: 80%;
+            }
+        }
+        .list-label::after {
+            content: "";
+            width: 4.9vw;
+            height: 2.4vw;
+            left: 0;
+            top: 11.4vw;
+            position: absolute;
+            background-color: #d9d7c4;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+        .list-image {
+            width: 100%;
+            margin-bottom: 8vw;
+            img {
+                width: 100%;
+                aspect-ratio: 309/242;
+            }
+        }
+        h4 {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+        margin-bottom: 14.6vw;
+        .subtitle {
+            width: 28.4vw;
+            margin: -1.7vw auto 7.7vw auto;
+            .sub-copy {
+                font-size: 2.3vw;
+            }
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            li {
+                width: 25.3vw;
+                padding-left: 1.4vw;
+                margin-bottom: 5.1vw;
+                .list-label {
+                    width: 12.5vw;
+                    height: 3.8vw;
+                    top: 1.5vw;
+                }
+                .list-label::after {
+                    width: 1.4vw;
+                    height: 0.7vw;
+                    top: 3.8vw;
+                }
+                .list-image {
+                    margin-bottom: 2.5vw;
+                }
+            }
+        }
     }
 }
 </style>

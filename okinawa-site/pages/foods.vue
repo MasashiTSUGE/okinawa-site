@@ -8,6 +8,7 @@
         />
         <FoodsIntro />
         <FoodsRecommend />
+        <FoodsRestaurant />
         <CommonSlide />
         <GetInTouch />
         <Footer />
