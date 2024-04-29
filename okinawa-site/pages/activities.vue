@@ -8,6 +8,7 @@
         />
         <ActivitiesIntro />
         <ActivitiesContents />
+        <ActivitiesPriceLocation />
         <CommonSlide />
         <GetInTouch />
         <Footer />

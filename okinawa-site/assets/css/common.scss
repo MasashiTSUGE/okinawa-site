@@ -43,13 +43,14 @@ a:hover {
 .main-font,
 .main-font-en,
 * p {
-    font-family: "Oswald", "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: 3.2vw;
     line-height: 1.5;
     letter-spacing: 1.5px;
     text-align: justify;
 }
 .main-font-en {
+    font-family: "Oswald", "Noto Sans JP", sans-serif;
     letter-spacing: 0;
 }
 .copyright {
@@ -72,6 +73,9 @@ a:hover {
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 500;
+}
+img {
+    object-fit: cover;
 }
 /* header */
 .header {

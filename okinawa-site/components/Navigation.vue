@@ -92,21 +92,6 @@ export default {
         clickMenu() {
             this.activeMenu = !this.activeMenu;
             this.$emit("childe-data", this.activeMenu);
-            if (this.activeMenu === true) {
-                document.addEventListener("mousewheel", scroll_control, {
-                    passive: false,
-                });
-                document.addEventListener("touchmove", scroll_control, {
-                    passive: false,
-                });
-            } else {
-                document.removeEventListener("mousewheel", scroll_control, {
-                    passive: false,
-                });
-                document.removeEventListener("touchmove", scroll_control, {
-                    passive: false,
-                });
-            }
         },
     },
 };
@@ -134,7 +119,7 @@ export default {
     height: 100vh;
     left: 0;
     top: 79px;
-    z-index: 999;
+    z-index: 65536;
     @media screen and (min-width: 768px) {
         top: 147px;
     }

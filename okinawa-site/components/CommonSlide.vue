@@ -72,7 +72,7 @@ export default {
         line-height: 1.75;
     }
     @media screen and (min-width: 768px) {
-        padding-top: 0;
+        padding-top: 14.6vw;
         .sub-copy {
             margin-left: 4.2vw;
             font-size: 2.6vw;

@@ -310,6 +310,7 @@ section {
         width: 88.8vw;
         height: 79.4vw;
         margin-left: 11.2vw;
+        margin-bottom: 12.5vw;
         .hotels-textbox {
             left: -6.9vw;
             top: 48.6vw;

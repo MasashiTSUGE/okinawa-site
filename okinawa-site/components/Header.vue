@@ -1,6 +1,6 @@
 <template>
     <header class="header" :class="{ open: activeMenu }">
-        <h1 class="main-font uppercase header-title text-lightgray">
+        <h1 class="main-font-en uppercase header-title text-lightgray">
             trip japan
         </h1>
         <Navigation @childe-data="childeData" />
@@ -27,6 +27,8 @@ export default {
 <style lang="scss" scoped>
 .header {
     background-color: transparent;
+    overflow: hidden;
+    z-index: 999;
     @media screen and (min-width: 768px) {
         padding: 30px 38px 55px;
         max-width: 1366px;
@@ -39,5 +41,7 @@ export default {
 }
 .open {
     background-color: #fff;
+    position: fixed;
+    width: 100vw;
 }
 </style>

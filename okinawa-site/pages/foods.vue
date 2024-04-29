@@ -6,6 +6,8 @@
             title="foods"
             subtitle="沖縄絶品料理"
         />
+        <FoodsIntro />
+        <FoodsRecommend />
         <CommonSlide />
         <GetInTouch />
         <Footer />
@@ -22,5 +24,6 @@ export default {
     components: {
         SubHero: SubHero,
     },
+    mounted() {},
 };
 </script>

@@ -98,6 +98,7 @@ footer {
         position: fixed;
         bottom: 2vw;
         right: 2vw;
+        z-index: 998;
         .icon {
             width: 8vw;
             height: 8vw;
