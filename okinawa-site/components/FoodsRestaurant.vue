@@ -50,6 +50,7 @@ export default {
                 {
                     name: "琉球ダイニングふぁいみーる",
                     price: { min: "5000", max: "5999" },
+                    link: "#",
                 },
             ],
         };
