@@ -8,12 +8,6 @@
     --NotoSans: "Noto Sans JP", sans-serif;
     --Oswald: "Oswald", sans-serif;
 }
-$pc: 768px;
-@mixin pc {
-    @media screen and (max-width: ($pc)) {
-        @content;
-    }
-}
 .body {
     width: 100vw;
     height: 100vh;

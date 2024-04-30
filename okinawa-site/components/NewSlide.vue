@@ -60,7 +60,7 @@ export default {
         moveSlide() {
             const slideimg = document.querySelector(".slide-image");
             const imglength = slideimg.getBoundingClientRect().width;
-            const imgmargin = window.getComputedStyle(slideimg).marginRight * 2;
+            const imgmargin = window.getComputedStyle(".");
         },
     },
     computed: {

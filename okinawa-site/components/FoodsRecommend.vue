@@ -80,6 +80,7 @@ export default {
 .recommend {
     padding-left: 3.4vw;
     padding-right: 3.4vw;
+    margin-bottom: 32.8vw;
     .subtitle {
         text-align: center;
         background-color: #fff;

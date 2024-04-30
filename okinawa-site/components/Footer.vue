@@ -27,7 +27,7 @@
         </h2>
         <div class="footer-icons">
             <a class="footer-icon"><Icon name="mage:instagram-circle" /></a>
-            <a class="footer-icon"><Icon name="formkit:twitter" /></a>
+            <a class="footer-icon"><Icon name="mdi:twitter-circle" /></a>
         </div>
         <p class="copyright uppercase">trip japanおよび当サイトは架空です</p>
         <div class="button-top" @click="goTop" v-show="scrollY > windowHeight">

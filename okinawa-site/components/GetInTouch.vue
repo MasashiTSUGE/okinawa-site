@@ -32,7 +32,7 @@
         p {
             a {
                 padding-bottom: 0.2em;
-                border-bottom: 1px solid var(--text-main);
+                border-bottom: 1px solid currentColor;
             }
         }
     }

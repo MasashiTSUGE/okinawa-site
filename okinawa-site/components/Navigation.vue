@@ -10,51 +10,53 @@
                 :class="{ 'nav-open': activeMenu }"
             >
                 <ul>
-                    <!-- <li class="nav-header">
-                        <h2
-                            class="heading uppercase header-title text-lightgray"
-                        >
-                            trip japan
-                        </h2>
-                        <div class="nav-close nav-btn" @click="clickMenu">
-                            <Icon name="ci:close-lg" class="close-icon" />
-                        </div>
-                    </li> -->
                     <li class="nav-list">
-                        <router-link to="/" class="section-title"
+                        <nuxt-link
+                            to="/"
+                            class="section-title"
+                            :class="{ currentpage: currentpage == 0 }"
                             ><p class="section-title">トップ</p>
                             <div>
                                 <Icon
                                     name="material-symbols-light:play-circle-outline"
                                 /></div
-                        ></router-link>
+                        ></nuxt-link>
                     </li>
                     <li class="nav-list">
-                        <router-link to="/activities" class="section-title"
+                        <nuxt-link
+                            to="/activities"
+                            class="section-title"
+                            :class="{ currentpage: currentpage == 1 }"
                             ><p class="section-title">アクティビティ</p>
                             <div>
                                 <Icon
                                     name="material-symbols-light:play-circle-outline"
                                 /></div
-                        ></router-link>
+                        ></nuxt-link>
                     </li>
                     <li class="nav-list">
-                        <router-link to="/foods" class="section-title"
+                        <nuxt-link
+                            to="/foods"
+                            class="section-title"
+                            :class="{ currentpage: currentpage == 2 }"
                             ><p class="section-title">沖縄絶品料理</p>
                             <div>
                                 <Icon
                                     name="material-symbols-light:play-circle-outline"
                                 /></div
-                        ></router-link>
+                        ></nuxt-link>
                     </li>
                     <li class="nav-list">
-                        <router-link to="/hotels" class="section-title"
+                        <nuxt-link
+                            to="/hotels"
+                            class="section-title"
+                            :class="{ currentpage: currentpage == 3 }"
                             ><p class="section-title">宿泊施設</p>
                             <div>
                                 <Icon
                                     name="material-symbols-light:play-circle-outline"
                                 /></div
-                        ></router-link>
+                        ></nuxt-link>
                     </li>
                     <li class="nav-footer">
                         <div>
@@ -63,7 +65,7 @@
                             /></a>
                         </div>
                         <div>
-                            <a href="#"><Icon name="formkit:twitter" /></a>
+                            <a href="#"><Icon name="mdi:twitter-circle" /></a>
                         </div>
                     </li>
                 </ul>
@@ -81,12 +83,23 @@ export default {
     data() {
         return {
             activeMenu: false,
+            currentpage: 0,
         };
     },
     computed: {
         icon: function () {
             return !this.activeMenu ? "iconamoon:apps-fill" : "ci:close-lg";
         },
+    },
+    mounted() {
+        console.log(this.$route.name);
+        if (this.$route.name == "activities") {
+            this.currentpage = 1;
+        } else if (this.$route.name == "foods") {
+            this.currentpage = 2;
+        } else if (this.$route.name == "hotels") {
+            this.currentpage = 3;
+        }
     },
     methods: {
         clickMenu() {
@@ -107,6 +120,10 @@ export default {
         width: 50px;
         height: 50px;
     }
+}
+.currentpage {
+    color: var(--text-lightgray);
+    pointer-events: none;
 }
 .close-icon {
     width: 100%;

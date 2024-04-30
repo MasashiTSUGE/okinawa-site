@@ -6,6 +6,8 @@
             title="hotels"
             subtitle="宿泊施設"
         />
+        <HotelIntro />
+        <HotelRecommend />
         <CommonSlide />
         <GetInTouch />
         <Footer />

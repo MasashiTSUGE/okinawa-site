@@ -6,6 +6,9 @@
         <IndexContents />
     </div>
 </template>
+<script>
+export default {};
+</script>
 <style lang="scss" scoped>
 .contents-wrap {
     width: 100%;
