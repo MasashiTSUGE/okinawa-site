@@ -1,19 +1,25 @@
 <template>
     <section class="news">
         <ul>
-            <li><p class="uppercase">what's new</p></li>
-            <li v-for="(item, index) in lists" :key="index">
-                <p>
-                    <span>{{ item.date }}</span
-                    >{{ item.text }}
-                </p>
-            </li>
+            <FadeIn>
+                <li><p class="uppercase">what's new</p></li>
+            </FadeIn>
+            <FadeIn>
+                <li v-for="(item, index) in lists" :key="index">
+                    <p>
+                        <span>{{ item.date }}</span
+                        >{{ item.text }}
+                    </p>
+                </li></FadeIn
+            >
         </ul>
     </section>
 </template>
 
 <script>
+import FadeIn from "~/components/FadeIn.vue";
 export default {
+    component: ["FadeIn"],
     data() {
         return {
             lists: [

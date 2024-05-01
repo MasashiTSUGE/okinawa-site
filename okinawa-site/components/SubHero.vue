@@ -1,8 +1,7 @@
 <template>
     <div class="subhero" :style="{ backgroundImage: 'url(' + bgUrl + ')' }">
         <p class="breadcrumb">
-            <router-link to="index.vue">top</router-link><span>-</span
-            >{{ title }}
+            <nuxt-link to="/">top</nuxt-link><span>-</span>{{ title }}
         </p>
         <h2 class="sub-h2">{{ title }}</h2>
         <h3 class="sub-h3">{{ subtitle }}</h3>

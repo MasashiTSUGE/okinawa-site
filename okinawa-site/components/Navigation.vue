@@ -92,7 +92,6 @@ export default {
         },
     },
     mounted() {
-        console.log(this.$route.name);
         if (this.$route.name == "activities") {
             this.currentpage = 1;
         } else if (this.$route.name == "foods") {

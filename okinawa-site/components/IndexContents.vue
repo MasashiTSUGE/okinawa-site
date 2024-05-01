@@ -1,72 +1,98 @@
 <template>
     <div>
         <section class="overview">
-            <div class="overview-image"></div>
+            <FadeIn>
+                <div class="overview-image"></div>
+            </FadeIn>
+
             <div class="overview-textbox textbox">
-                <h3 class="uppercase main-font-en">
-                    <span>01</span>{{ textbox[0].section }}
-                </h3>
-                <div class="border-topbottom">
-                    <h4 class="section-title">{{ textbox[0].title }}</h4>
-                    <p>{{ textbox[0].text }}</p>
-                </div>
-                <a v-if="textbox[0].link">詳しく見る</a>
+                <FadeIn>
+                    <h3 class="uppercase main-font-en">
+                        <span>01</span>{{ textbox[0].section }}
+                    </h3>
+                    <div class="border-topbottom">
+                        <h4 class="section-title">{{ textbox[0].title }}</h4>
+                        <p>{{ textbox[0].text }}</p>
+                        <a v-if="textbox[0].link">詳しく見る</a>
+                    </div>
+                </FadeIn>
             </div>
         </section>
         <section class="activities">
             <p class="index-vertical vertical">遊ぶ</p>
             <div class="activities-hanabi"></div>
-            <div class="activities-image-1"></div>
-            <div class="activities-image-2"></div>
-            <div class="activities-image-3"></div>
+            <FadeIn>
+                <div class="activities-image-1"></div>
+            </FadeIn>
+            <FadeIn>
+                <div class="activities-image-2"></div>
+            </FadeIn>
+            <FadeIn>
+                <div class="activities-image-3"></div>
+            </FadeIn>
+
             <div class="activities-textbox textbox">
-                <h3 class="uppercase main-font-en">
-                    <span>02</span>{{ textbox[1].section }}
-                </h3>
-                <div class="border-topbottom">
-                    <h4 class="section-title">{{ textbox[1].title }}</h4>
-                    <p>{{ textbox[1].text }}</p>
-                    <a v-if="textbox[1].link" href="/activities"
-                        ><p>詳しく見る</p>
-                        <Icon name="material-symbols-light:play-circle-outline"
-                    /></a>
-                </div>
+                <FadeIn>
+                    <h3 class="uppercase main-font-en">
+                        <span>02</span>{{ textbox[1].section }}
+                    </h3>
+                    <div class="border-topbottom">
+                        <h4 class="section-title">{{ textbox[1].title }}</h4>
+                        <p>{{ textbox[1].text }}</p>
+                        <a v-if="textbox[1].link" href="/activities"
+                            ><p>詳しく見る</p>
+                            <Icon
+                                name="material-symbols-light:play-circle-outline"
+                        /></a></div
+                ></FadeIn>
             </div>
         </section>
         <section class="foods">
             <p class="index-vertical vertical">食べる</p>
             <div class="food-hibiscus"></div>
-            <FoodsSlide />
+            <FadeIn>
+                <FoodsSlide />
+            </FadeIn>
+
             <div class="foods-textbox textbox">
-                <h3 class="uppercase main-font-en">
-                    <span>03</span>{{ textbox[2].section }}
-                </h3>
-                <div class="border-topbottom">
-                    <h4 class="section-title">{{ textbox[2].title }}</h4>
-                    <p>{{ textbox[2].text }}</p>
-                    <a v-if="textbox[2].link" href="/foods"
-                        ><p>詳しく見る</p>
-                        <Icon name="material-symbols-light:play-circle-outline"
-                    /></a>
-                </div>
+                <FadeIn
+                    ><h3 class="uppercase main-font-en">
+                        <span>03</span>{{ textbox[2].section }}
+                    </h3>
+                    <div class="border-topbottom">
+                        <h4 class="section-title">{{ textbox[2].title }}</h4>
+                        <p>{{ textbox[2].text }}</p>
+                        <a v-if="textbox[2].link" href="/foods"
+                            ><p>詳しく見る</p>
+                            <Icon
+                                name="material-symbols-light:play-circle-outline"
+                        /></a></div
+                ></FadeIn>
             </div>
         </section>
         <section class="hotels">
-            <div class="hotel-image"></div>
+            <FadeIn>
+                <div class="hotel-image"></div>
+            </FadeIn>
             <p class="index-vertical vertical">泊まる</p>
-            <HotelSlide />
+            <FadeIn>
+                <HotelSlide />
+            </FadeIn>
             <div class="hotels-textbox textbox">
-                <h3 class="uppercase main-font-en">
-                    <span>04</span>{{ textbox[3].section }}
-                </h3>
-                <div class="border-topbottom">
-                    <h4 class="section-title">{{ textbox[3].title }}</h4>
-                    <p>{{ textbox[3].text }}</p>
-                    <a v-if="textbox[3].link" href="hotels"
-                        ><p>詳しく見る</p>
-                        <Icon name="material-symbols-light:play-circle-outline"
-                    /></a>
-                </div>
+                <FadeIn>
+                    <h3 class="uppercase main-font-en">
+                        <span>04</span>{{ textbox[3].section }}
+                    </h3>
+                    <div class="border-topbottom">
+                        <h4 class="section-title">{{ textbox[3].title }}</h4>
+                        <p>{{ textbox[3].text }}</p>
+                        <a v-if="textbox[3].link" href="hotels"
+                            ><p>詳しく見る</p>
+                            <Icon
+                                name="material-symbols-light:play-circle-outline"
+                        /></a>
+                    </div>
+                </FadeIn>
             </div>
         </section>
         <CommonSlide />
@@ -75,7 +101,9 @@
     </div>
 </template>
 <script>
+import FadeIn from "~/components/FadeIn.vue";
 export default {
+    component: [FadeIn],
     data() {
         return {
             textbox: [

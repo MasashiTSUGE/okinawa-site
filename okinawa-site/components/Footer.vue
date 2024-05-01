@@ -2,28 +2,26 @@
     <footer>
         <ul class="footer-links">
             <li>
-                <router-link to="/index" class="main-font-en uppercase"
-                    >top</router-link
+                <nuxt-link to="/" class="main-font-en uppercase">top</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/activities" class="main-font-en uppercase"
+                    >activities</nuxt-link
                 >
             </li>
             <li>
-                <router-link to="/activities" class="main-font-en uppercase"
-                    >activities</router-link
+                <nuxt-link to="/foods" class="main-font-en uppercase"
+                    >foods</nuxt-link
                 >
             </li>
             <li>
-                <router-link to="/foods" class="main-font-en uppercase"
-                    >foods</router-link
-                >
-            </li>
-            <li>
-                <router-link to="/hotels" class="main-font-en uppercase"
-                    >hotels</router-link
+                <nuxt-link to="/hotels" class="main-font-en uppercase"
+                    >hotels</nuxt-link
                 >
             </li>
         </ul>
         <h2 class="fotter-logo main-font-en uppercase">
-            <router-link to="/index">trip japan</router-link>
+            <nuxt-link to="/">trip japan</nuxt-link>
         </h2>
         <div class="footer-icons">
             <a class="footer-icon"><Icon name="mage:instagram-circle" /></a>
