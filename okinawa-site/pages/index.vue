@@ -1,5 +1,9 @@
+<script setup>
+useHead({ title: "Okinawa-site | Index Page" });
+</script>
 <template>
     <div class="contents-wrap">
+        <Loading />
         <Header />
         <Hero />
         <News />

@@ -28,7 +28,7 @@
             <a class="footer-icon"><Icon name="mdi:twitter-circle" /></a>
         </div>
         <p class="copyright uppercase">trip japanおよび当サイトは架空です</p>
-        <div class="button-top" @click="goTop" v-show="scrollY > windowHeight">
+        <div class="button-top" @click="goTop" v-show="showTopButton">
             <Icon name="material-symbols-light:expand-circle-up-outline" />
         </div>
     </footer>
@@ -39,10 +39,12 @@ export default {
         return {
             scrollY: 0,
             windowHeight: window.innerHeight,
+            showTopButton: false,
         };
     },
     mounted() {
         window.addEventListener("scroll", this.getScroll);
+        window.addEventListener("resize", this.getHeight);
     },
     methods: {
         goTop: function () {
@@ -53,6 +55,18 @@ export default {
         },
         getScroll: function () {
             this.scrollY = window.scrollY;
+            this.toggleShow();
+        },
+        getHeight: function () {
+            this.windowHeight = window.innerHeight;
+            this.toggleShow();
+        },
+        toggleShow: function () {
+            if (this.scrollY > this.windowHeight) {
+                this.showTopButton = true;
+            } else {
+                this.showTopButton = false;
+            }
         },
     },
 };

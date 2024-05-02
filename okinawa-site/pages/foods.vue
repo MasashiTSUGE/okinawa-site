@@ -1,3 +1,6 @@
+<script setup>
+useHead({ title: "Okinawa-site | Foods" });
+</script>
 <template>
     <div class="contents-wrap">
         <Header />

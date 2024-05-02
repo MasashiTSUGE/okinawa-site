@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            title: "okinawa-site",
+            title: "Okinawa-Site",
             link: [
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
                 {
