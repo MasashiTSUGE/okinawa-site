@@ -73,7 +73,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 footer {
-    background: url(images/footer-bg.png) center/cover;
+    background: url("/images/footer-bg.png") center/cover;
     width: 100vw;
     height: 125vw;
     color: var(--text-lightgray);

@@ -156,7 +156,7 @@ section {
         top: 70px;
         aspect-ratio: 342/400;
         height: auto;
-        background: url(images/index-overview.png) center/cover;
+        background: url("/images/index-overview.png") center/cover;
         z-index: 5;
     }
     .overview-textbox {
@@ -190,7 +190,7 @@ section {
         bottom: -30vw;
     }
     .activities-hanabi {
-        background: url(images/index-activities-hanabi.svg) center/contain
+        background: url("/images/index-activities-hanabi.svg") center/contain
             no-repeat;
         width: 29.8vw;
         aspect-ratio: 112/80;
@@ -205,7 +205,7 @@ section {
         z-index: 7;
     }
     .activities-image-1 {
-        background: url(images/index-activities-1.png) center/cover no-repeat;
+        background: url("/images/index-activities-1.png") center/cover no-repeat;
         position: absolute;
         width: 43.7vw;
         aspect-ratio: 1/1;
@@ -215,7 +215,7 @@ section {
     }
     .activities-image-2 {
         position: absolute;
-        background: url(images/index-activities-2.png) center/cover;
+        background: url("/images/index-activities-2.png") center/cover;
         width: 12.3vw;
         aspect-ratio: 46/103;
         top: 8.8vw;
@@ -223,7 +223,7 @@ section {
     }
     .activities-image-3 {
         position: absolute;
-        background: url(images/index-activities-3.png) 65% 50% / cover;
+        background: url("/images/index-activities-3.png") 65% 50% / cover;
         width: 12.3vw;
         aspect-ratio: 46/103;
         top: -13vw;
@@ -288,7 +288,7 @@ section {
     .food-hibiscus {
         width: 26.6vw;
         height: 26.6vw;
-        background: url("images/index-food-hibiscus.svg") center/contain
+        background: url("/images/index-food-hibiscus.svg") center/contain
             no-repeat;
         position: absolute;
         right: -17.6vw;

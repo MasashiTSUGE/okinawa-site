@@ -76,7 +76,7 @@ export default {
         };
     },
     mounted() {
-        // setInterval(this.change, 7500);
+        setInterval(this.change, 5000);
     },
     methods: {
         change() {

@@ -224,7 +224,7 @@ export default {
         transform: scaleY(30%);
     }
     100% {
-        tramsform: scaleY(100%);
+        transform: scaleY(100%);
     }
 }
 </style>
